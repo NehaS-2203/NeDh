@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Countdown ⏳❤️</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background-color: #fff0f5;
+            margin: 20px;
+        }
+        h1 {
+            color: #d63384;
+        }
+        .countdown-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .countdown-box {
+            margin: 20px 0;
+            padding: 15px;
+            background: #ffebcd;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        .home-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #d63384;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+        .home-button:hover {
+            background: #c2185b;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>⏳ Our Special Countdowns ❤️</h1>
+
+    <div class="countdown-container">
+        
+        <!-- Countdown Since We Met -->
+        <div class="countdown-box">
+            <h2>Since We Met On Tea ❤️</h2>
+            <p id="met-countdown">Calculating...</p>
+        </div>
+
+        <!-- Countdown Since Proposal -->
+        <div class="countdown-box">
+            <h2>Since I Kissed You For The First Time 💕</h2>
+            <p id="proposal-countdown">Calculating...</p>
+        </div>
+
+    </div>
+
+    <a href="index.html" class="home-button">Home</a>
+
+    <script>
+        function updateCountdown(dateString, elementId) {
+            const startDate = new Date(dateString);
+            const now = new Date();
+            const diffTime = now - startDate;
+            
+            const days = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diffTime / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((diffTime / (1000 * 60)) % 60);
+            const seconds = Math.floor((diffTime / 1000) % 60);
+
+            document.getElementById(elementId).innerHTML = `${days} Days, ${hours} Hours, ${minutes} Minutes, ${seconds} Seconds`;
+        }
+
+        // Run the countdowns every second
+        setInterval(() => {
+            updateCountdown("2024-01-02", "met-countdown"); // Since We Met
+            updateCountdown("2024-01-12", "proposal-countdown"); // Since Proposal
+        }, 1000);
+    </script>
+
+</body>
+</html>

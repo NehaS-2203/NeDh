@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Lane</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .love-notes-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #note-input {
+            width: 80%;
+            height: 80px;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #d63384;
+            font-family: 'Poppins', sans-serif;
+            display: block;
+            margin: 10px auto;
+        }
+
+        .notes-wall {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            justify-content: center;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .note-item {
+            background-color: #ffebcd;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            word-wrap: break-word;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .note-item:hover {
+            transform: scale(1.05);
+        }
+
+        .delete-btn {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            background: none;
+            border: none;
+            color: red;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Memory Lane</h1>
+        <a href="index.html" class="home-button">Home</a>
+    </header>
+    
+    <main>
+        <div class="love-notes-container">
+            <h2>Your Love Notes 💌</h2>
+            <textarea id="note-input" placeholder="Write a sweet note..."></textarea>
+            <button onclick="addNote()">Add Note</button>
+            <div class="notes-wall" id="notes-wall"></div>
+        </div>
+    </main>
+    
+    <script>
+        function addNote() {
+            let noteText = document.getElementById("note-input").value;
+            if (noteText.trim() === "") return;
+            
+            let note = document.createElement("div");
+            note.classList.add("note-item");
+            note.innerHTML = `<p>${noteText}</p>`;
+            
+            let deleteBtn = document.createElement("button");
+            deleteBtn.innerHTML = "&times;";
+            deleteBtn.classList.add("delete-btn");
+            deleteBtn.onclick = function() {
+                note.remove();
+            };
+            
+            note.appendChild(deleteBtn);
+            document.getElementById("notes-wall").appendChild(note);
+            document.getElementById("note-input").value = "";
+        }
+    </script>
+</body>
+</html>

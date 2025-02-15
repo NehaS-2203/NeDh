@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Love Letter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>My Love Letter to You ❤️</h1>
+        <a href="index.html" class="home-button">Home</a>
+
+    </header>
+    <main>
+        <button onclick="revealLetter()">Reveal Letter</button>
+        <p id="love-letter" style="display: none;">
+            January's chill, our paths did cross,<br>
+            Classmates then, friends forever lost.<br>
+            
+            Over chai, our hearts first met,<br>
+            Little did we know, love's journey to be set.<br>
+            
+            With rising spring, our bond takes place,<br>
+            Friendship blossomed, love's gentle chase.<br>
+            
+            Like stars, our love shines bright,<br>
+            In each other's eyes, our hearts take flight.<br>
+            
+            Pritisangam Ghat, our secret dates,<br>
+            Where two rivers meet, our love's warm space<br>
+            
+            You see my beauty, inside and out,<br>
+            And cherish me, without a doubt.<br>
+            
+            Always and forever you make me smile,<br>
+            With you, my heart beats worth your while.<br>
+            
+            You call me Twinkle, my favourite nickname,<br>
+            A love shining bright, like stars in the flame.<br>
+            
+            Your smile, my soul feel the breeze,<br>
+            With you, my love, my heart finds ease.<br>
+            
+            Forever and always, our love will grow,<br>
+            Through life's seasons, our hearts will glow. <br>
+                💖</p>
+        <button onclick="speakLetter()">Read it to Me</button>
+    </main>
+    <script>
+        function revealLetter() {
+            document.getElementById('love-letter').style.display = 'block';
+        }
+        
+        function speakLetter() {
+            let text = document.getElementById('love-letter').innerText;
+            let speech = new SpeechSynthesisUtterance(text);
+            window.speechSynthesis.speak(speech);
+        }
+    </script>
+</body>
+</html>

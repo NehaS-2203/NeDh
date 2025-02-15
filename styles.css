@@ -1,0 +1,111 @@
+body {
+    font-family: 'Dancing Script', cursive;
+    background-color: #ffe6e6;
+    text-align: center;
+    color: #d63384;
+    margin: 0;
+    padding: 20px;
+    position: relative;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300;400;600&display=swap');
+
+header {
+    background-color: #ffb3c1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem; /* Adjusted for better alignment */
+    font-family: 'Dancing Script', cursive;
+}
+
+main {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 12px; /* Adjusted gap for better spacing */
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.menu-item {
+    background-color: #fff;
+    padding: 12px; /* Adjusted padding for text alignment */
+    border-radius: 8px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+}
+
+.menu-item img {
+    width: 60%; /* Further reduced size */
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.menu-item p {
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+button, .menu-button {
+    display: inline-block;
+    background-color: #ff85a2;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-family: 'Poppins', sans-serif;
+    margin: 8px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+button:hover, .menu-button:hover {
+    background-color: #d63384;
+}
+
+#result-message {
+    font-size: 1rem;
+    margin-top: 18px;
+    font-weight: bold;
+}
+
+.home-button {
+    display: inline-block;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #ff85a2;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 1rem;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.home-button:hover {
+    background-color: #d63384;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Playlist 🎶</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background-color: #fff0f5;
+            margin: 20px;
+        }
+        h1 {
+            color: #d63384;
+        }
+        .playlist-container {
+            max-width: 800px;
+            margin: auto;
+        }
+        .song {
+            margin-bottom: 40px;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        iframe {
+            border-radius: 12px;
+            width: 100%;
+        }
+        .home-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #d63384;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+        .home-button:hover {
+            background: #c2185b;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🎶 Our Playlist 🎶</h1>
+
+    <div class="playlist-container">
+        
+        <!-- Chand Si Mehbooba -->
+        <div class="song">
+            <h2>Our Song</h2>
+            <p>Listen on Spotify:</p>
+            <iframe src="https://open.spotify.com/embed/track/5vfbwf5XQEFlqwpAiI3UTH" height="80" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            <p>Watch on YouTube:</p>
+            <iframe src="https://www.youtube.com/embed/Cl9xTmAYEog" height="200" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!-- Khayaal -->
+        <div class="song">
+            <h2>Khayaal - I Listen This When I Miss You</h2>
+            <p>Listen on Spotify:</p>
+            <iframe src="https://open.spotify.com/embed/track/18qN1yxa4SVwmykQq1Icrl" height="80" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            <p>Watch on YouTube:</p>
+            <iframe src="https://www.youtube.com/embed/X1PguQUsqGQ" height="200" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!-- Mahiya Jinna Sohna -->
+        <div class="song">
+            <h2>Our Engagement Song</h2>
+            <p>Listen on Spotify:</p>
+            <iframe src="https://open.spotify.com/embed/track/example" height="80" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            <p>Watch on YouTube:</p>
+            <iframe src="https://www.youtube.com/embed/example" height="200" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+    </div>
+
+    <a href="index.html" class="home-button">Home</a>
+
+</body>
+</html>

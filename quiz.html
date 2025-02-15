@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>💕 Cute Love Quiz 💕</h1>
+        <a href="index.html" class="home-button">Home</a>
+
+    </header>
+    <main>
+        <p>Let's see how well you know us! 😊</p>
+        <div id="quiz-container">
+            <div class="question">
+                <p>1. Where did we have our first date? 🤗</p>
+                <button onclick="checkAnswer(this, 'correct')">At Girija</button>
+                <button onclick="checkAnswer(this, 'wrong')">At the park</button>
+                <button onclick="checkAnswer(this, 'wrong')">At College</button>
+            </div>
+            <div class="question">
+                <p>2. What is my favorite nickname for you? 💖</p>
+                <button onclick="checkAnswer(this, 'wrong')">Sweetie</button>
+                <button onclick="checkAnswer(this, 'correct')">Twinkle</button>
+                <button onclick="checkAnswer(this, 'wrong')">Baal</button>
+            </div>
+            <div class="question">
+                <p>3. What I like most in you? 😍</p>
+                <button onclick="checkAnswer(this, 'wrong')">Your Hug ❤️</button>
+                <button onclick="checkAnswer(this, 'correct')">Your Smile ❤️</button>
+                <button onclick="checkAnswer(this, 'wrong')">Your Love ❤️</button>
+            </div>
+        </div>
+        <p id="result-message" style="display: none;"></p>
+    </main>
+    <script>
+        function checkAnswer(button, status) {
+            if (status === 'correct') {
+                button.style.backgroundColor = "lightgreen";
+                document.getElementById("result-message").innerText = "You guessed it right 😍 I Love You Honey !! 💕";
+            } else {
+                button.style.backgroundColor = "lightcoral";
+                document.getElementById("result-message").innerText = "Oops! But I still love you! 💕";
+            }
+            document.getElementById("result-message").style.display = "block";
+        }
+    </script>
+</body>
+</html>

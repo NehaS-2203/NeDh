@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open When Letters</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Open When Letters 💌</h1>
+        <a href="index.html" class="home-button">Home</a>
+
+    </header>
+    <main>
+        <ul>
+            <li><button onclick="revealLetter('happy')">Open When You're Happy 😊</button></li>
+            <li><button onclick="revealLetter('sad')">Open When You're Sad 😢</button></li>
+            <li><button onclick="revealLetter('missing')">Open When You Miss Me 💕</button></li>
+            <li><button onclick="revealLetter('tired')">Open When You're Tired 💤</button></li>
+        </ul>
+        <p id="message" style="display: none;"></p>
+    </main>
+    <script>
+        function revealLetter(type) {
+            let messages = {
+                'happy': "I'm so glad you're feeling happy! Remember, your smile is my favorite thing in the world. Keep this smile honey your twinkee loves that! 💖",
+                'sad': "Baal, I’m here for you, always. No matter what, you are never alone. Sending you a big warm hug and ypur favourite kisses. Love You Forever. 🤗",
+                'missing': "Dhanraj, I miss you too! But remember, love knows no distance. Counting down the moments until I see you again. Keep Smiling Husband ❤️",
+                'tired': "Take a deep breath, Honey. Rest well and know that I’m thinking of you. Love You Always. 😴"
+            };
+            
+            let messageElement = document.getElementById('message');
+            messageElement.innerText = messages[type];
+            messageElement.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
